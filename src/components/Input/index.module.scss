@@ -1,0 +1,53 @@
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 138%;
+  color: var(--dark-gray-translucent);
+}
+
+.inputContainer {
+
+  &>input {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  &[data-is-valid=true],
+  &[data-is-valid=false] {
+    position: relative;
+
+    &>img {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      padding: 6px;
+      border-radius: 50%;
+    }
+  }
+
+  &[data-is-valid=true] {
+    border-color: var(--pale-green);
+
+    &>img {
+      background-color: var(--pale-green);
+    }
+  }
+
+  &[data-is-valid=false] {
+    border-color: var(--pale-pink);
+
+    &>img {
+      background-color: var(--pale-pink);
+    }
+  }
+}
+
+.validationImage {}

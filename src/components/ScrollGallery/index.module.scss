@@ -1,0 +1,37 @@
+.gallery {
+  display: flex;
+  gap: 32px;
+  max-width: 93.7rem;
+  overflow-y: hidden;
+}
+
+.scrollButtons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+
+  &>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    filter: var(--pale-gray-filter);
+
+    &:hover {
+      filter: var(--pale-pink-filter);
+    }
+
+    &:active {
+      background-color: var(--pale-pink);
+      filter: none;
+    }
+
+    &:last-child {
+      transform: rotate(180deg);
+    }
+  }
+}

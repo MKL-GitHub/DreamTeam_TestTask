@@ -1,0 +1,120 @@
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+
+  &>label {
+    font-size: 16px;
+    line-height: 138%;
+    color: var(--dark-gray-translucent);
+  }
+}
+
+.selectContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 16px;
+  height: 65px;
+
+  &[data-is-opened=true] {
+    & .button {
+      border-color: var(--pale-blue);
+
+      &>img {
+        filter: var(--pale-blue-filter);
+      }
+    }
+  }
+
+  &>img {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    filter: var(--pale-gray-filter);
+
+    &[data-is-opened=true] {
+      filter: var(--pale-blue-filter);
+      transform: rotate(90deg);
+    }
+  }
+
+  &[data-is-valid=true],
+  &[data-is-valid=false] {
+    padding-right: 20px;
+
+    &>img {
+      filter: none;
+      padding: 6px;
+      width: 24px;
+      height: 24px;
+      transform: none;
+      background-color: var(--pale-pink);
+    }
+  }
+
+  &[data-is-valid=true] {
+    border-color: var(--pale-green);
+
+    &>img {
+      background-color: var(--pale-green);
+    }
+  }
+
+  &[data-is-valid=false] {
+    border-color: var(--pale-pink);
+
+    &>img {
+      background-color: var(--pale-pink);
+    }
+  }
+}
+
+.selectedOption {
+  font-size: 16px;
+  line-height: 138%;
+  color: var(--dark-gray);
+
+  &[data-has-text=false] {
+    color: var(--light-gray-translucent);
+  }
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 24px #2323230d;
+
+  &>option {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    font-size: 16px;
+    line-height: 138%;
+    color: var(--dark-gray);
+    padding: 13px 24px;
+
+    &:hover {
+      background-color: var(--pale-gray);
+    }
+  }
+}
+
+@media (max-width: 763px) {
+  .selectContainer {
+    &>img {
+      width: 24px;
+      height: 24px;
+      padding: 6px;
+    }
+  }
+}

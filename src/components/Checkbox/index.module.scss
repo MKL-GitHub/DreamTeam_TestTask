@@ -1,0 +1,43 @@
+.index {
+  display: flex;
+  align-items: center;
+
+  &>label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    line-height: 138%;
+    color: var(--dark-gray-translucent);
+    cursor: pointer;
+
+
+    &>input {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+
+    &>div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      border: 1px solid var(--pale-gray);
+    }
+
+    &[data-is-checked=false]:hover {
+      &>div {
+        border-color: var(--pale-blue);
+      }
+    }
+
+    &[data-is-checked=true] {
+      &>div {
+        background-color: var(--pale-blue);
+      }
+    }
+  }
+}
