@@ -1,3 +1,6 @@
+<h2 align="center">Desktop</h2>
+<img src="https://github.com/MKL-GitHub/DreamTeam_TestTask/assets/93647476/c38ea357-0cb2-4e6a-8659-85c5fdfdf32b">
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
